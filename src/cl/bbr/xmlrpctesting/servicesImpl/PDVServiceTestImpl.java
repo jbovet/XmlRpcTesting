@@ -1,8 +1,8 @@
 package cl.bbr.xmlrpctesting.servicesImpl;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
-import java.util.Vector;
 
 import cl.bbr.xmlrpctesting.services.PDVServiceTest;
 
@@ -13,9 +13,19 @@ import cl.bbr.xmlrpctesting.services.PDVServiceTest;
 public class PDVServiceTestImpl implements PDVServiceTest {
 
 	@Override
-	public Map<String, Object> reciveDatosTesting(Vector<Map<String, Object>> mapa,String usuario, String password) {
+	public Map<String, Object> reciveDatosTesting(List<Map<String, Object>> mapa,String usuario, String password) {
 		HashMap<String, Object> result = new HashMap<String, Object>();
-		result.put("OK", "OK");
+		HashMap<String, Object> subMapa = new HashMap<String, Object>();
+		
+		subMapa.put("tradingLocationName","v1");
+		subMapa.put("tradingLocationNumber","v2");
+		subMapa.put("ageSegment","v3");
+		subMapa.put("businessType","v4");
+		subMapa.put("businessSubType","v5");
+		subMapa.put("channel","v6");
+		
+		result.put("data", subMapa);
+		result.put("ack", "ACKdata");
 		return result;
 	}
 
