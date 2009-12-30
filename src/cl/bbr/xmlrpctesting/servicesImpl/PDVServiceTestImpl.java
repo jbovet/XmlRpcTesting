@@ -23,6 +23,7 @@ public class PDVServiceTestImpl implements PDVServiceTest {
 		subMapa.put("businessType","v4");
 		subMapa.put("businessSubType","v5");
 		subMapa.put("channel","v6");
+		subMapa.put("channel2","v2");
 		
 		result.put("data", subMapa);
 		result.put("ack", "ACKdata");

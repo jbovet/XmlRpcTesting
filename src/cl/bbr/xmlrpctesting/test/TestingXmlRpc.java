@@ -39,17 +39,23 @@ public class TestingXmlRpc {
 		String usuario = "user";
 		String password = "password";
 		HashMap<String, Object> mapa = new HashMap<String, Object>();
-		//Vector<HashMap<String, Object>> lista = new Vector<HashMap<String,Object>>();
-		List<Map<String, Object>> subLista = new ArrayList<Map<String,Object>>();
+		List<Map<String, Object>> lista = new ArrayList<Map<String,Object>>();
+		HashMap<String, Object> subLista= new HashMap<String, Object>();
+		
+		subLista.put("v1", "v1-sublist");		
+		subLista.put("v2", "v2-sublist");		
+		subLista.put("v3", "v3-sublist");		
+
+		mapa.put("sublist", subLista);
 		
 		mapa.put("campo1", "valor1");
 		mapa.put("campo2", "valor2");
 		mapa.put("campo3", "valor3");
 		
 		//agregamos el mapa a la lista
-		subLista.add(mapa);
+		lista.add(mapa);
 		
-		Object[] params = new Object[] { subLista, usuario, password};
+		Object[] params = new Object[] { lista, usuario, password};
 		HashMap resultMap = (HashMap) client.execute("PDVServiceTest.reciveDatosTesting", params);
 		Assert.assertEquals(2, resultMap.size());
 	}
