@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beansProjectDescription>
+	<version>1</version>
+	<pluginVersion><![CDATA[2.3.0.200912170948-RELEASE]]></pluginVersion>
+	<configSuffixes>
+		<configSuffix><![CDATA[xml]]></configSuffix>
+	</configSuffixes>
+	<enableImports><![CDATA[false]]></enableImports>
+	<configs>
+		<config>WebContent/WEB-INF/application-context.xml</config>
+		<config>WebContent/WEB-INF/XmlRpcTesting-servlet.xml</config>
+	</configs>
+	<configSets>
+		<configSet>
+			<name><![CDATA[ConfigSets]]></name>
+			<allowBeanDefinitionOverriding>true</allowBeanDefinitionOverriding>
+			<incomplete>false</incomplete>
+			<configs>
+				<config>WebContent/WEB-INF/application-context.xml</config>
+				<config>WebContent/WEB-INF/XmlRpcTesting-servlet.xml</config>
+			</configs>
+		</configSet>
+	</configSets>
+</beansProjectDescription>
