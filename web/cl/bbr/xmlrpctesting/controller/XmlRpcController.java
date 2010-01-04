@@ -23,8 +23,10 @@ public class XmlRpcController {
 	@RequestMapping(value="/xmlrpcrequest")
 	public void xmlHandler(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse){
 		try {
+			
 			xmlRpcServletServer.setHandlerMapping(mapping);
 			xmlRpcServletServer.execute(httpServletRequest,httpServletResponse);
+			
 		} catch (ServletException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
