@@ -5,7 +5,6 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd">
 
 	<context:annotation-config />
-
 	<bean id="xmlRpcHandlerMapping"
 		class="cl.bbr.xmlrpctesting.handlermapping.SimpleHandlerMapping">
 		<property name="services">

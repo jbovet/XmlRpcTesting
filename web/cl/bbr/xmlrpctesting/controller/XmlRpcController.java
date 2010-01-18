@@ -26,7 +26,8 @@ public class XmlRpcController {
 			
 			xmlRpcServletServer.setHandlerMapping(mapping);
 			xmlRpcServletServer.execute(httpServletRequest,httpServletResponse);
-			
+			XmlRpcHandlerMapping handlerMapping = xmlRpcServletServer.getHandlerMapping();
+			System.out.println(handlerMapping.toString());
 		} catch (ServletException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
