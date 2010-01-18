@@ -11,6 +11,7 @@
 			<map>
 				<entry key="ServiceTest" 	value-ref="ServiceTest" />
 				<entry key="PDVServiceTest" value-ref="PDVServiceTest" />
+				<entry key="ObjetivoService" value-ref="ObjetivoServiceBean" />
 			</map>
 		</property>
 	</bean>
@@ -23,5 +24,9 @@
 	<bean id="ServiceTest" class="cl.bbr.xmlrpctesting.servicesImpl.TestServiceImpl" />
 
 	<bean id="PDVServiceTest" class="cl.bbr.xmlrpctesting.servicesImpl.PDVServiceTestImpl" />
+	
+	<bean id="ObjetivoServiceBean" class="cl.bbr.xmlrpctesting.servicesImpl.ObjetivoServiceImpl">
+	
+</bean>
 
 </beans>
